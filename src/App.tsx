@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { NavLink, Routes, Route, Navigate } from 'react-router-dom'
+//import { Pokemon, PokemonEdit, PokemonList, PokemonsDetail } from './pages/pokemon'
+import { PageNotFound } from './pages/page-not-found'
 
-function App() {
+/*
+<Route path="/" element={<Pokemon />} >
+  <Route path="pokemon" element={<PokemonList />} />
+  <Route path="pokemon/edit/:id" element={<PokemonEdit />} />
+  <Route path="pokemon/:id" element={<PokemonsDetail />} />
+</Route>
+*/
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav>
+        <h1>Kasa</h1>
+        <ul>
+          <li>
+            <NavLink to={'/'}>Accueil</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/about'}>A propos</NavLink>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+
+        <Route path="/404" element={<PageNotFound />} />
+        <Route path="*" element={<Navigate to="/404" replace />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
