@@ -1,0 +1,28 @@
+.paysage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 300px;
+  border-radius: 20px;
+
+  margin-bottom: 30px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.95);
+}
+
+.paysage-title {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.paysage-montage {
+  background-image: url("/public/assets/paysage-montagne.png");
+}
+
+.paysage-cote {
+  background-image: url("/public/assets/paysage-cote.png");
+}

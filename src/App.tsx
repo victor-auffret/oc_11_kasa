@@ -1,35 +1,18 @@
-import { NavLink, Routes, Route, Navigate } from 'react-router-dom'
-//import { Pokemon, PokemonEdit, PokemonList, PokemonsDetail } from './pages/pokemon'
-import { PageNotFound } from './pages/page-not-found'
+import { Outlet } from 'react-router-dom'
 
-/*
-<Route path="/" element={<Pokemon />} >
-  <Route path="pokemon" element={<PokemonList />} />
-  <Route path="pokemon/edit/:id" element={<PokemonEdit />} />
-  <Route path="pokemon/:id" element={<PokemonsDetail />} />
-</Route>
-*/
+import './App.css'
+import { NavMenu } from './components/nav-menu'
+import { PiedComponent } from './components/pied'
 
 const App = () => {
 
   return (
-    <div>
-      <nav>
-        <h1>Kasa</h1>
-        <ul>
-          <li>
-            <NavLink to={'/'}>Accueil</NavLink>
-          </li>
-          <li>
-            <NavLink to={'/about'}>A propos</NavLink>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-
-        <Route path="/404" element={<PageNotFound />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
-      </Routes>
+    <div className="app">
+      <NavMenu />
+      <main id="main">
+        <Outlet />
+      </main>
+      <PiedComponent />
     </div>
   )
 }

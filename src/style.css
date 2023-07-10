@@ -1,13 +1,123 @@
-body {
+:root {
+  --orange: rgb(255, 96, 96);
+}
+
+/*** RESET CSS ***/
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+dialog,
+div,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: var(--orange);
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover,
+button:focus button:active {
+  border: none;
+  text-decoration: none;
+  background: transparent;
+  outline: none;
+  outline-offset: 0;
+  transform: scale(1);
+}
+
+/*** END RESET ***/
+
+/** ----------------------------------------------------------------------------------- **/
+
+/*** BASE ***/
+
+html {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: var(--font-desktop);
+  font-weight: var(--font-regular);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin: 0 auto;
+  line-height: 1.625rem;
+}
+
+/*** END BASE ***/
+
+#root {
+  width: 100%;
+  height: 100%;
+  padding: 50px 100px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

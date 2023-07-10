@@ -1,0 +1,31 @@
+.title {
+  width: 200px;
+  height: auto;
+  background-image: url("./kasa.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 60px;
+  background-color: #fff;
+  color: var(--orange);
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}

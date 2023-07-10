@@ -42,3 +42,10 @@ ROUTER
   transform: rotate(45deg);
 }
 
+-----------------
+
+06/07/23 : 
+  - typage du logement
+  - pages logement, about, not found, principale
+  - ajout des routes
+  - 
