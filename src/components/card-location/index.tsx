@@ -7,9 +7,11 @@ interface IProps {
 
 const CardLocation: FunctionComponent<IProps> = (props: IProps) => {
  return <div className="card-location">
-  <h4>
-   {props?.titre ?? "titre de la location"}
-  </h4>
+  <div className="card-gradient">
+   <h4>
+    {props?.titre ?? "titre de la location"}...
+   </h4>
+  </div>
  </div>
 }
 

@@ -19,10 +19,10 @@
   font-size: 3rem;
 }
 
-.paysage-montage {
-  background-image: url("/public/assets/paysage-montagne.png");
-}
-
 .paysage-cote {
   background-image: url("/public/assets/paysage-cote.png");
+}
+
+.paysage-montagne {
+  background-image: url("/public/assets/paysage-montagne.png");
 }

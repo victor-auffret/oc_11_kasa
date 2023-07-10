@@ -4,9 +4,7 @@ import kasaLogo from "./kasa.svg"
 
 const NavMenu = () => {
  return <nav className="nav-menu">
-  <div className="title">
-
-  </div>
+  <NavLink className="title" to={`/`}></NavLink>
   <ul className={"nav-list"}>
    <li className={"nav-link"}>
     <NavLink to={`/`}>Accueil</NavLink>

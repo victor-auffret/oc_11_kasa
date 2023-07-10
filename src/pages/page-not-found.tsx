@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { useRouteError } from "react-router-dom";
+import { ErrorComponent } from '../components/error';
 
 interface IError {
  error?: {
@@ -15,14 +16,7 @@ const PageNotFound: FunctionComponent = () => {
  console.log(error)
 
  return <div>
-  <h3>Mon erreur !</h3>
-  <p>
-   <i>code : {error?.status}</i>
-   <br />
-   <span>data : {error?.data}</span>
-   <br />
-   <span>message : {error?.error?.message}</span>
-  </p>
+  <ErrorComponent code={Number(error?.status)} msg={error.error?.message} />
  </div>
 }
 

@@ -1,5 +1,6 @@
 :root {
   --orange: rgb(255, 96, 96);
+  --light-grey: rgb(246, 246, 246);
 }
 
 /*** RESET CSS ***/
@@ -63,6 +64,10 @@ a:hover,
 a:visited {
   text-decoration: none;
   color: var(--orange);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 button {
