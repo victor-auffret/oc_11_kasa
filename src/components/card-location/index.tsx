@@ -1,15 +1,22 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Logement } from '../../models/logement';
+
 import "./index.css"
 
 interface IProps {
- titre?: string;
+ location: Logement;
 }
 
 const CardLocation: FunctionComponent<IProps> = (props: IProps) => {
+ const navigate = useNavigate()
+ const goLogement = useCallback(() => {
+  navigate(`/logement/${props.location.id}`)
+ }, [])
  return <div className="card-location">
-  <div className="card-gradient">
+  <div className="card-gradient" onClick={goLogement}>
    <h4>
-    {props?.titre ?? "titre de la location"}...
+    {props.location?.title ?? "titre de la location"}...
    </h4>
   </div>
  </div>

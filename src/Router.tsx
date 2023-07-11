@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <PageAbout />
    },
    {
-    path: "/logement",
+    path: "/logement/:id",
     element: <PageLogement />
    },
    {

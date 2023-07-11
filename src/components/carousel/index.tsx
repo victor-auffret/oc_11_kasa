@@ -6,27 +6,32 @@ interface IProps {
 }
 
 const CarouselComponent: FunctionComponent<IProps> = (props: IProps) => {
+
  const [index, setIndex] = useState(0)
 
- const nbImage = useMemo(() => {
-  return props.images.length
- }, [props.images])
-
  const currentImage = useMemo(() => {
-  return (nbImage > 0) ? props.images[index % nbImage] : null
- }, [index, nbImage])
+  return (props.images.length > 0) ? props.images[index % props.images.length] : null
+ }, [index, props.images.length])
 
- const next = useCallback(() => {
-  setIndex(v => (v + 1) % nbImage)
- }, [])
+ const next = useCallback(
+  () => setIndex(v => Number((v + 1) % props.images.length)),
+  [props.images.length]
+ )
 
- const prev = useCallback(() => {
-  setIndex(v => (nbImage + v - 1) % nbImage)
- }, [])
+ const prev = useCallback(
+  () => setIndex(v => Number((props.images.length + v - 1) % props.images.length)),
+  [props.images.length]
+ )
 
- return <div className={`carousel`}>
+ const style = useMemo(() => {
+  return {
+   backgroundImage: `url(${currentImage})`
+  }
+ }, [currentImage])
+
+ return <div className={`carousel`} style={style}>
   <button onClick={prev}>précédent</button>
-  {currentImage}
+  {Number(index) + 1} / {props.images.length}
   <button onClick={next}>suivant</button>
  </div>
 }

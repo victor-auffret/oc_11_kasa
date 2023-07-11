@@ -1,13 +1,14 @@
-import { FunctionComponent, useCallback, useMemo, useState } from 'react';
+import { Children, FunctionComponent, useCallback, useMemo, useState } from 'react';
 import "./index.css"
 
 interface IProps {
  titre: string,
- contenu: string
+ children: any[] | any
 }
 
 const AccordeonComponent: FunctionComponent<IProps> = (props: IProps) => {
 
+ //console.log("accordeon props : ", props)
  const [visible, setVisible] = useState(false)
 
  const toggle = useCallback(() => {
@@ -15,10 +16,14 @@ const AccordeonComponent: FunctionComponent<IProps> = (props: IProps) => {
  }, [])
 
  const Infos = useMemo(() => {
-  return <div className={`accordeon-contenu`}>
-   {props.contenu}
-  </div>
- }, [])
+  return (<div className={`accordeon-contenu`}>
+   {
+    Array.isArray(props.children) ?
+     props.children.map((e, k) => <p key={`${props.titre}-${k}`}>{e}</p>) :
+     props.children
+   }
+  </div>)
+ }, [props.titre, props.children])
 
  return <div className={`accordeon`}>
   <header className={`accordeon-header`} onClick={toggle}>

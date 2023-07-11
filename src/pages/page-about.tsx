@@ -25,7 +25,9 @@ const PageAbout: FunctionComponent = () => {
   <PaysageComponent image="montagne" />
   <div>
    {
-    data.map(acc => <AccordeonComponent titre={acc.titre} contenu={acc.contenu} />)
+    data.map((acc, i) => <AccordeonComponent key={`about-${acc.titre}-${i}`} titre={acc.titre}>
+     {acc.contenu}
+    </AccordeonComponent>)
    }
   </div>
  </div>
