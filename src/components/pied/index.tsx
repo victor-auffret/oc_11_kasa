@@ -6,7 +6,7 @@ const PiedComponent: FunctionComponent = () => {
 
   <div className="kasa-logo"></div>
 
-  <p>
+  <p className={`pied-copy`}>
    © 2020 Kasa. All rights reserved
   </p>
  </div>

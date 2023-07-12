@@ -1,22 +1,32 @@
 .paysage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  --paysage-radius: 25px;
   height: 300px;
-  border-radius: 20px;
+  border-radius: var(--paysage-radius);
 
   margin-bottom: 30px;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: brightness(0.95);
+}
+
+.paysage-filtre {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: var(--paysage-radius);
+
+  background-color: rgba(9, 9, 9, 0.3);
 }
 
 .paysage-title {
   color: #fff;
   font-size: 3rem;
+  font-weight: 500;
 }
 
 .paysage-cote {

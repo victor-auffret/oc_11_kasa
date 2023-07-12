@@ -12,6 +12,17 @@
   font-size: 5rem;
 }
 
+.error-logo-404 {
+  width: 40vw;
+  max-width: 600px;
+  height: auto;
+}
+
 .error-msg {
-  font-size: 2rem;
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
+.error-back {
+  font-size: 1.125rem;
 }

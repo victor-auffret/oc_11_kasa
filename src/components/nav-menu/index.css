@@ -1,7 +1,7 @@
 .title {
-  width: 200px;
-  height: auto;
-  background-image: url("./kasa.svg");
+  width: 210px;
+  height: 70px;
+  background-image: url("../../../public/assets/img/kasa_title_orange.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -23,5 +23,6 @@
   display: inline-block;
   padding: 10px;
   margin-left: 10px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 500;
 }

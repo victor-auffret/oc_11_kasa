@@ -1,0 +1,12 @@
+/*
+.logement-infos-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+*/
+
+.logement-infos {
+  color: var(--orange);
+}

@@ -8,7 +8,10 @@ interface IProps {
 
 const PaysageComponent: FunctionComponent<IProps> = (props: IProps) => {
  return <div className={`paysage paysage-${props.image}`}>
-  {props?.titre ? <h3 className="paysage-title">{props.titre}</h3> : null}
+  <div className={`paysage-filtre`}>
+   {props?.titre ? <h3 className="paysage-title">{props.titre}</h3> : null}
+  </div>
+
  </div>
 }
 

@@ -17,3 +17,8 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.pied-copy {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
