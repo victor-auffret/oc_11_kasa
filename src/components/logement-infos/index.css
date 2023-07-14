@@ -1,12 +1,5 @@
-/*
-.logement-infos-tags {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-*/
-
 .logement-infos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   color: var(--orange);
 }

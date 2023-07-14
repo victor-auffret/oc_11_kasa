@@ -13,6 +13,10 @@
   aspect-ratio: 340 / 345;
 }
 
+.card-location:hover {
+  cursor: pointer;
+}
+
 .card-gradient {
   width: 100%;
   height: 100%;

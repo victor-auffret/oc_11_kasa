@@ -86,7 +86,9 @@ button:hover,
 button:focus button:active {
   border: none;
   text-decoration: none;
+  /*
   background: transparent;
+  */
   outline: none;
   outline-offset: 0;
   transform: scale(1);

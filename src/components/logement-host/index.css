@@ -1,0 +1,13 @@
+.logement-host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+
+.logement-vendeur-nom {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-right: 15px;
+  text-align: right;
+}

@@ -1,17 +1,13 @@
 .card-list {
-  /*
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 30px;*/
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   align-items: center;
   justify-content: center;
 
   padding-top: 30px;
+  margin-bottom: 15px;
+  border-radius: 25px;
 
   background-color: rgb(246, 246, 246);
 }

@@ -1,10 +1,13 @@
 import { FunctionComponent } from 'react';
 
 import { Logement } from '../../models/logement';
+
+import { LogementHostComponent } from '../logement-host';
 import { EtoileListComponent } from '../etoile-list';
+import { TagListComponent } from '../tag-list';
 
 import "./index.css";
-import { TagComponent } from '../tag';
+import { LogementIntituleComponent } from '../logement-intitule';
 
 interface IProps {
  logement: Logement
@@ -13,14 +16,11 @@ interface IProps {
 const LogementInfosComponent: FunctionComponent<IProps> = ({ logement }: IProps) => {
  return <div className={`logement-infos`}>
 
-  <h4>{logement?.title}</h4>
-  <h5>{logement?.location}</h5>
-  <p className={`logement-infos-tags`}>
-   {logement?.tags?.map((tag, i) => <TagComponent key={`tag-${tag}-${i}`} tag={tag} />)}
-  </p>
+  <LogementIntituleComponent titre={logement?.title} lieu={logement?.location} />
 
-  <p>{logement?.host?.name}</p>
-  <span>{logement?.host?.picture}</span>
+  <LogementHostComponent name={logement?.host?.name} picture={logement?.host?.picture} />
+
+  <TagListComponent tags={logement?.tags} />
 
   <EtoileListComponent rate={Number(logement?.rating ?? 0)} />
 
