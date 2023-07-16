@@ -7,9 +7,9 @@ import {
 
 import App from './App'
 import { PageNotFound } from "./pages/page-not-found";
-import { PageAbout } from "./pages/page-about";
-import { PageLogement } from "./pages/page-logement";
-import { PageHome } from "./pages/home";
+import { PageAbout } from "./pages/about/index";
+import { PageLogement } from "./pages/logement/index";
+import { PageHome } from "./pages/home/index";
 import { ErrorComponent } from "./components/error";
 
 const router = createBrowserRouter([

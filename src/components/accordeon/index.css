@@ -1,8 +1,11 @@
 .accordeon {
   --size-chevron: 2;
-  /*
-  margin-bottom: 15px;
-  */
+  --carre-size: 22px;
+  --contenu-font-size: 1.125rem;
+  --title-font-size: 1.5rem;
+
+  width: 100%;
+  max-width: 1024px;
   border-radius: 10px;
   color: #fff;
 }
@@ -26,20 +29,23 @@
 }
 
 .accordeon-title {
-  font-size: 1.125rem;
+  font-size: var(--title-font-size, 1.5rem);
   font-weight: 500;
+  line-height: 2rem;
 }
 
 .accordeon-contenu {
-  padding: 30px 20px;
+  min-height: 140px;
 
+  padding: 20px;
   border-radius: 10px;
 
   background-color: var(--light-grey);
   color: var(--orange);
 
-  font-size: 1.125rem;
+  font-size: var(--contenu-font-size, 1.125rem);
   font-weight: 400;
+  line-height: 2rem;
 }
 
 .icon-chevron {
@@ -47,8 +53,8 @@
   position: relative;
   display: block;
   transform: scale(var(--size-chevron, 1));
-  width: 22px;
-  height: 22px;
+  width: var(--carre-size, 22px);
+  height: var(--carre-size, 22px);
   border: 2px solid transparent;
   border-radius: 100px;
 }
@@ -74,4 +80,12 @@
 
 .icon-chevron-down::before {
   transform: translateY(-5px) rotate(45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .accordeon {
+    --carre-size: 18px;
+    --contenu-font-size: 0.75rem;
+    --title-font-size: 0.8125rem;
+  }
 }

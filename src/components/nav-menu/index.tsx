@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom"
 import "./index.css"
-import kasaLogo from "./kasa.svg"
 
 const NavMenu = () => {
  return <nav className="nav-menu">

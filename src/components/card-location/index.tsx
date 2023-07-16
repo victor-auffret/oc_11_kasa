@@ -15,7 +15,7 @@ const CardLocation: FunctionComponent<IProps> = (props: IProps) => {
  }, [])
  return <div className="card-location">
   <div className="card-gradient" onClick={goLogement}>
-   <h4>
+   <h4 className={`card-location-titre`}>
     {props.location?.title ?? "titre de la location"}...
    </h4>
   </div>

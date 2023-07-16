@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: end;
+  grid-area: avatar;
 }
 
 .logement-vendeur-nom {
@@ -10,4 +11,10 @@
   font-weight: 500;
   margin-right: 15px;
   text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .logement-vendeur-nom {
+    font-size: 0.75rem;
+  }
 }

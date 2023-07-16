@@ -1,13 +1,13 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { CarouselComponent } from '../components/carousel';
-import { AccordeonComponent } from '../components/accordeon';
-import { LogementInfosComponent } from '../components/logement-infos';
+import { CarouselComponent } from '../../components/carousel';
+import { AccordeonComponent } from '../../components/accordeon';
+import { LogementInfosComponent } from '../../components/logement-infos';
 
-import { Logement } from '../models/logement';
-import { useLocations } from '../hooks/useLocations';
+import { Logement } from '../../models/logement';
+import { useLocations } from '../../hooks/useLocations';
 
-import "./logement.css"
+import "./index.css"
 
 
 interface IParams {
@@ -31,7 +31,7 @@ const PageLogement: FunctionComponent = () => {
   }
  }, [params.id, logements])
 
- return <div>
+ return <div className={`logement-container`}>
   {
    logement != null ? (
     <>

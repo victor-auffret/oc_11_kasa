@@ -1,8 +1,8 @@
 import { FunctionComponent, useState } from 'react';
-import { PaysageComponent } from '../components/paysage';
-import { AccordeonComponent } from '../components/accordeon';
+import { PaysageComponent } from '../../components/paysage';
+import { AccordeonComponent } from '../../components/accordeon';
 
-import "./about.css";
+import "./index.css";
 
 const ABOUT = [
  {
@@ -25,7 +25,7 @@ const ABOUT = [
 
 const PageAbout: FunctionComponent = () => {
  const [data] = useState(ABOUT)
- return <div>
+ return <div className={`about`}>
   <PaysageComponent image="montagne" />
   <section className={`about-accordeon`}>
    {

@@ -1,5 +1,18 @@
 .logement-infos {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "titre titre avatar"
+    "tag tag etoiles";
+
+  /*grid-template-columns: 2fr 1fr;*/
   color: var(--orange);
+}
+
+@media screen and (max-width: 768px) {
+  .logement-infos {
+    grid-template-areas:
+      "titre titre"
+      "tag tag"
+      "etoiles avatar";
+  }
 }

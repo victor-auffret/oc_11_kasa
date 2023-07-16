@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useMemo } from 'react';
 import "./index.css";
 
 interface IProps {
@@ -6,12 +6,13 @@ interface IProps {
  name: string
 }
 
-const AvatarComponent: FunctionComponent<IProps> = ({ picture, name }: IProps) => {
- return (
-  <div className={`avatar-container`}>
-   <img src={picture} alt={name} />
-  </div>
- )
+const AvatarComponent: FunctionComponent<IProps> = ({ picture }: IProps) => {
+ const style = useMemo(() => {
+  return {
+   backgroundImage: `url(${picture})`
+  }
+ }, [picture])
+ return (<div className={`avatar-container`} style={style}></div>)
 }
 
 export { AvatarComponent }

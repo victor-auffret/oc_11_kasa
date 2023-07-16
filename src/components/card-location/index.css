@@ -33,3 +33,17 @@
     rgba(0, 0, 0, 0.5) 100%
   );
 }
+
+.card-location-titre {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .card-location {
+    margin: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    aspect-ratio: 63 / 51;
+  }
+}

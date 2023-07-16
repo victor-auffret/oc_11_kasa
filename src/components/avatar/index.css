@@ -2,9 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65px;
-  width: 65px;
+
+  min-width: 32px;
+  max-width: 65px;
+  width: 4.5vw;
+
+  min-height: 32px;
+  max-height: 65px;
+  height: 4.5vw;
+
   border-radius: 50%;
+
+  background-size: contain;
+  background-position: center;
+
   overflow: hidden;
   aspect-ratio: 1 / 1;
 }

@@ -1,7 +1,14 @@
 .etoile {
-  width: 36px;
-  height: 36px;
+  min-width: 18px;
+  max-width: 36px;
+  width: 2.5vw;
+
+  min-height: 18px;
+  max-width: 36px;
+  height: 2.5vw;
+
   margin-left: 2px;
   background-repeat: no-repeat;
   background-size: cover;
+  aspect-ratio: 1 / 1;
 }

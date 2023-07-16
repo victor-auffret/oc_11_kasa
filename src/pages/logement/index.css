@@ -1,0 +1,20 @@
+.logement-container {
+  padding: 0 100px;
+}
+
+.logement-contenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .logement-container {
+    padding: 0 20px;
+  }
+
+  .logement-contenu {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

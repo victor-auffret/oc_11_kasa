@@ -20,6 +20,8 @@
 
   border-radius: var(--paysage-radius);
 
+  padding: 20px;
+
   background-color: rgba(9, 9, 9, 0.3);
 }
 
@@ -27,6 +29,7 @@
   color: #fff;
   font-size: 3rem;
   font-weight: 500;
+  line-height: 4.3rem; /*68.45px;*/
 }
 
 .paysage-cote {
@@ -35,4 +38,17 @@
 
 .paysage-montagne {
   background-image: url("/public/assets/paysage-montagne.png");
+}
+
+@media screen and (max-width: 768px) {
+  .paysage {
+    --paysage-radius: 10px;
+    height: auto;
+    aspect-ratio: 3 / 1;
+  }
+
+  .paysage-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 }

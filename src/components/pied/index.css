@@ -18,7 +18,7 @@
 .kasa-logo {
   height: 40px;
   width: 125px;
-  background-image: url("./LOGO.svg");
+  background-image: url("../../../public/assets/img/logo_pied.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -26,4 +26,14 @@
 .pied-copy {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .pied {
+    margin: 0px;
+  }
+
+  .pied-copy {
+    font-size: 0.75rem;
+  }
 }

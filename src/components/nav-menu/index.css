@@ -1,18 +1,24 @@
-.title {
-  width: 210px;
-  height: 70px;
-  background-image: url("../../../public/assets/img/kasa_title_orange.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .nav-menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 60px;
+  align-items: center;
+
+  padding: 40px 100px;
+
   background-color: #fff;
   color: var(--orange);
+}
+
+.title {
+  min-width: 145px;
+  width: 15vw; /*210px;*/
+  min-height: 50px;
+  height: 5vw; /* 70px;*/
+  /* %PUBLIC_URL% */
+  background-image: url("../../../public/assets/img/kasa_title_orange.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .nav-list {
@@ -25,4 +31,16 @@
   margin-left: 10px;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    padding: 20px;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-left: 0;
+  }
 }
