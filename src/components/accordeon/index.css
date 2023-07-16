@@ -5,7 +5,7 @@
   --title-font-size: 1.5rem;
 
   width: 100%;
-  max-width: 1024px;
+  max-width: max(1024px, 71vw);
   border-radius: 10px;
   color: #fff;
 }

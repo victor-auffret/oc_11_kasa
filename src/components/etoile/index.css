@@ -1,11 +1,11 @@
 .etoile {
   min-width: 18px;
   max-width: 36px;
-  width: 2.5vw;
+  width: clamp(18px, 2.5vw, 36px);
 
   min-height: 18px;
   max-width: 36px;
-  height: 2.5vw;
+  height: clamp(18px, 2.5vw, 36px);
 
   margin-left: 2px;
   background-repeat: no-repeat;
