@@ -8,11 +8,13 @@ const CardList = () => {
 
  const locations: Logement[] = useLocations()
 
- return (<div className="card-list">
-  {
-   locations?.map((location) => <CardLocation key={`card-location-${location.id}`} location={location} />)
-  }
- </div>)
+ return (
+  <div className="card-list">
+   {
+    locations?.map((location) => <CardLocation key={`card-location-${location.id}`} location={location} />)
+   }
+  </div>
+ )
 }
 
 export { CardList }

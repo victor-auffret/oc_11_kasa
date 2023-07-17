@@ -33,11 +33,11 @@
 }
 
 .paysage-cote {
-  background-image: url("/public/assets/paysage-cote.png");
+  background-image: url("/public/assets/img/paysage-cote.png");
 }
 
 .paysage-montagne {
-  background-image: url("/public/assets/paysage-montagne.png");
+  background-image: url("/public/assets/img/paysage-montagne.png");
 }
 
 @media screen and (max-width: 768px) {

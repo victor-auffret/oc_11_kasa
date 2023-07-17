@@ -18,7 +18,7 @@
 .kasa-logo {
   height: 40px;
   width: 125px;
-  background-image: url("../../../public/assets/img/logo_pied.svg");
+  background-image: url("/public/assets/img/logo_pied.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }

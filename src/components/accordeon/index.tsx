@@ -10,13 +10,20 @@ interface IProps {
 
 const AccordeonComponent: FunctionComponent<IProps> = (props: IProps) => {
 
-  //console.log("accordeon props : ", props)
   const { visible, Infos, toggle } = useAccordeon(props.titre, props.children)
 
-  return <article className={`accordeon ${visible ? 'accordeon-gris' : ''}`}>
+  const classArticle = useMemo(() => {
+    return `accordeon ${visible ? 'accordeon-gris' : ''}`
+  }, [visible])
+
+  const classChevron = useMemo(() => {
+    return `icon-chevron icon-chevron-${visible ? "up" : "down"}`
+  }, [visible])
+
+  return <article className={classArticle}>
     <header className={`accordeon-header`} onClick={toggle}>
       <h5 className={`accordeon-title`}>{props.titre} </h5>
-      <span className={`icon-chevron icon-chevron-${visible ? "up" : "down"}`}></span>
+      <span className={classChevron}></span>
     </header>
     {visible === true ? Infos : null}
   </article>
