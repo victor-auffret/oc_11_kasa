@@ -34,9 +34,13 @@ const CarouselComponent: FunctionComponent<IProps> = ({ images }: IProps) => {
       <button onClick={next} className={`carousel-btn carousel-next`}></button> : null
   }
 
+  const Numerotation = () => {
+    return images.length > 0 ? <div className={`carousel-count`}>{Number(index) + 1} / {images.length}</div> : null
+  }
+
   return <div className={`carousel`} style={style}>
     <BtnPrev />
-    <div className={`carousel-count`}>{Number(index) + 1} / {images.length}</div>
+    <Numerotation />
     <BtnNext />
   </div>
 }
