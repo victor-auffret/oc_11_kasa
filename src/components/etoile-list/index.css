@@ -1,15 +1,16 @@
 .etoile-list {
+  --etoile-list-justify-content: flex-end;
+
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: var(--etoile-list-justify-content, flex-end);
   flex-wrap: wrap;
-
   grid-area: etoiles;
 }
 
 @media screen and (max-width: 768px) {
   .etoile-list {
-    justify-content: start;
+    --etoile-list-justify-content: flex-start;
   }
 }

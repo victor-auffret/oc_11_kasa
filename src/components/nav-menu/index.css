@@ -1,10 +1,14 @@
 .nav-menu {
+  --nav-menu-padding: 40px 100px;
+  --nav-link-transform: none;
+  --nav-link-font-size: 1.5rem;
+  --nav-link-margin-left: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  padding: 40px 100px;
+  padding: var(--nav-menu-padding, 40px 100px);
 
   background-color: #fff;
   color: var(--orange);
@@ -15,8 +19,7 @@
   width: 15vw; /*210px;*/
   min-height: 50px;
   height: 5vw; /* 70px;*/
-  /* %PUBLIC_URL% */
-  background-image: url("../../../public/assets/img/kasa_title_orange.svg");
+  background-image: url("/public/assets/img/kasa_title_orange.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -28,19 +31,17 @@
 .nav-link {
   display: inline-block;
   padding: 10px;
-  margin-left: 10px;
-  font-size: 1.5rem;
+  margin-left: var(--nav-link-margin-left, 10px);
+  font-size: var(--nav-link-font-size, 1.5rem);
   font-weight: 500;
+  text-transform: var(--nav-link-transform, none);
 }
 
 @media screen and (max-width: 768px) {
   .nav-menu {
-    padding: 20px;
-  }
-
-  .nav-link {
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    margin-left: 0;
+    --nav-menu-padding: 20px;
+    --nav-link-transform: uppercase;
+    --nav-link-font-size: 0.75rem;
+    --nav-link-margin-left: 0;
   }
 }

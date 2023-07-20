@@ -1,4 +1,8 @@
 .error-container {
+  --error-msg-font-size: 2.25rem;
+  --error-msg-line-height: 3.2rem;
+  --error-back-font-size: 1.125rem;
+  --error-back-line-height: 1.6rem;
   min-height: 500px;
   display: flex;
   flex-direction: column;
@@ -26,25 +30,22 @@
 
 .error-msg {
   padding: 0 55px;
-  font-size: 2.25rem;
+  font-size: var(--error-msg-font-size, 2.25rem);
   font-weight: 500;
-  line-height: 3.2rem;
+  line-height: var(--error-msg-line-height, 3.2rem);
 }
 
 .error-back {
-  font-size: 1.125rem;
+  font-size: var(--error-back-font-size, 1.125rem);
   font-weight: 500;
-  line-height: 1.6rem;
+  line-height: var(--error-back-line-height, 1.6rem);
 }
 
 @media screen and (max-width: 768px) {
-  .error-msg {
-    font-size: 1.125rem;
-    line-height: 1.6rem;
-  }
-
-  .error-back {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .error-container {
+    --error-msg-font-size: 1.125rem;
+    --error-msg-line-height: 1.6rem;
+    --error-back-font-size: 0.875rem;
+    --error-back-line-height: 1.25rem;
   }
 }

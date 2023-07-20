@@ -1,13 +1,20 @@
 .paysage {
   --paysage-radius: 25px;
-  height: 300px;
-  border-radius: var(--paysage-radius);
+  --paysage-heigth: 300px;
+  --paysage-aspect-ratio: auto;
+  --paysage-title-font-size: 3rem;
+  --paysage-title-line-height: 4.3rem;
+
+  height: var(--paysage-heigth, 300px);
+  border-radius: var(--paysage-radius, 25px);
 
   margin-bottom: 30px;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  aspect-ratio: var(--paysage-aspect-ratio, auto);
 }
 
 .paysage-filtre {
@@ -27,9 +34,9 @@
 
 .paysage-title {
   color: #fff;
-  font-size: 3rem;
+  font-size: var(--paysage-title-font-size, 3rem);
   font-weight: 500;
-  line-height: 4.3rem; /*68.45px;*/
+  line-height: var(--paysage-title-line-height, 4.3rem); /*68.45px;*/
 }
 
 .paysage-cote {
@@ -43,12 +50,9 @@
 @media screen and (max-width: 768px) {
   .paysage {
     --paysage-radius: 10px;
-    height: auto;
-    aspect-ratio: 3 / 1;
-  }
-
-  .paysage-title {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    --paysage-heigth: auto;
+    --paysage-aspect-ratio: 3 / 1;
+    --paysage-title-font-size: 1.5rem;
+    --paysage-title-line-height: 1.5rem;
   }
 }

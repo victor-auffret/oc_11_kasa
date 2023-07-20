@@ -1,18 +1,18 @@
 .card-location {
-  width: 340px;
+  --card-location-width: 340px;
+  --card-location-margin: 0 0 50px 0;
+  --card-location-aspect-ratio: 1 / 1;
 
-  /*
-  margin-bottom: 15px;
-  margin-left: 15px;
-  margin-right: 15px;*/
-  margin-bottom: 50px;
+  width: var(--card-location-width, 340px);
+
+  margin: var(--card-location-margin, 0 0 50px 0);
 
   border-radius: 10px;
 
   background-color: var(--orange);
   color: #fff;
 
-  aspect-ratio: 1 / 1;
+  aspect-ratio: var(--card-location-aspect-ratio, 1 / 1);
 }
 
 .card-location:hover {
@@ -43,9 +43,8 @@
 
 @media screen and (max-width: 768px) {
   .card-location {
-    margin: 0;
-    margin-bottom: 20px;
-    width: 100%;
-    aspect-ratio: 63 / 51;
+    --card-location-width: 100%;
+    --card-location-margin: 0 0 20px 0;
+    --card-location-aspect-ratio: 63 / 51;
   }
 }

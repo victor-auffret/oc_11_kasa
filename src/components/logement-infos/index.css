@@ -3,8 +3,6 @@
   grid-template-areas:
     "titre titre avatar"
     "tag tag etoiles";
-
-  /*grid-template-columns: 2fr 1fr;*/
   color: var(--orange);
 }
 

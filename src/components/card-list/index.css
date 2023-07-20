@@ -1,19 +1,21 @@
 .card-list {
+  --card-list-padding: 56px 50px;
+  --card-list-bg-color: var(--light-grey);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 
-  padding: 56px 50px;
+  padding: var(--card-list-padding, 56px 50px);
   border-radius: 25px;
 
-  background-color: rgb(246, 246, 246);
+  background-color: var(--card-list-bg-color);
 }
 
 @media screen and (max-width: 768px) {
   .card-list {
-    padding: 0;
-    background-color: transparent;
+    --card-list-padding: 0;
+    --card-list-bg-color: transparent;
   }
 }

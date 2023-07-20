@@ -1,15 +1,28 @@
 .logement-intitule {
+  --logement-titre-font-size: 2.25rem;
+  --logement-titre-line-height: 3.2rem;
+  --logement-lieu-font-size: 1.125rem;
+  --logement-lieu-line-height: 1.6rem;
   grid-area: titre;
 }
 
 .logement-titre {
-  font-size: 2.25rem;
+  font-size: var(--logement-titre-font-size, 2.25rem);
   font-weight: 500;
-  line-height: 3.2rem;
+  line-height: var(--logement-titre-line-height, 3.2rem);
 }
 
 .logement-lieu {
-  font-size: 1.125rem;
+  font-size: var(--logement-lieu-font-size, 1.125rem);
   font-weight: 500;
-  line-height: 1.6rem;
+  line-height: var(--logement-lieu-line-height, 1.6rem);
+}
+
+@media screen and (max-width: 768px) {
+  .logement-intitule {
+    --logement-titre-font-size: 1.125rem;
+    --logement-titre-line-height: 1.6rem;
+    --logement-lieu-font-size: 0.875rem;
+    --logement-lieu-line-height: 1.25rem;
+  }
 }

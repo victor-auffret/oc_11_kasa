@@ -1,20 +1,25 @@
 .logement-host {
+  --logement-host-font-size: 1.125rem;
+  --logement-host-line-height: 1.6rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   grid-area: avatar;
+  margin-bottom: 20px;
 }
 
 .logement-vendeur-nom {
-  font-size: 1.125rem;
+  font-size: var(--logement-host-font-size, 1.125rem);
   font-weight: 500;
+  line-height: var(--logement-host-line-height, 1.6rem);
   margin-right: 15px;
   text-align: right;
 }
 
 @media screen and (max-width: 768px) {
-  .logement-vendeur-nom {
-    font-size: 0.75rem;
+  .logement-host {
+    --logement-host-font-size: 0.75rem;
+    --logement-host-line-height: 1.07rem;
   }
 }
