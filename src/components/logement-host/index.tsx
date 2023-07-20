@@ -13,7 +13,7 @@ const LogementHostComponent: FunctionComponent<IProps> = ({ name, picture }: IPr
   <p className={`logement-vendeur-nom`}>
    {name.split(' ').map(n => <span key={`k-${n}`}>{n} <br /></span>)}
   </p>
-  <AvatarComponent picture={picture} name={name} />
+  <AvatarComponent picture={picture} />
  </div>
 }
 

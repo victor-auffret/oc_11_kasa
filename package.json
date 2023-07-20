@@ -20,6 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "start:build": "cd build && live-server --entry-file=index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

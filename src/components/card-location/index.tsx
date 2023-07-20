@@ -8,15 +8,15 @@ interface IProps {
  location: Logement;
 }
 
-const CardLocation: FunctionComponent<IProps> = (props: IProps) => {
+const CardLocation: FunctionComponent<IProps> = ({ location }: IProps) => {
  const navigate = useNavigate()
  const goLogement = useCallback(() => {
-  navigate(`/logement/${props.location.id}`)
- }, [])
+  navigate(`/logement/${location.id}`)
+ }, [navigate, location])
  return <div className="card-location">
   <div className="card-gradient" onClick={goLogement}>
    <h4 className={`card-location-titre`}>
-    {props.location?.title ?? "titre de la location"}...
+    {location?.title ?? "titre de la location"}...
    </h4>
   </div>
  </div>

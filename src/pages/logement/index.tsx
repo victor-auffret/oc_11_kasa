@@ -29,7 +29,7 @@ const PageLogement: FunctionComponent = () => {
     navigate('/404')
    }
   }
- }, [params.id, logements])
+ }, [navigate, params.id, logements])
 
  return <div className={`logement-container`}>
   {

@@ -29,10 +29,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .pied {
-    margin: 0px;
-  }
-
   .pied-copy {
     font-size: 0.75rem;
   }

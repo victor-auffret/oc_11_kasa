@@ -2,8 +2,7 @@ import { FunctionComponent, useMemo } from 'react';
 import "./index.css";
 
 interface IProps {
- picture: string,
- name: string
+ picture: string
 }
 
 const AvatarComponent: FunctionComponent<IProps> = ({ picture }: IProps) => {

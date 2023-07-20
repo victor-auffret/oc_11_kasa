@@ -8,6 +8,7 @@
   justify-content: space-between;
 
   height: 415px;
+  margin-bottom: 30px;
   border-radius: var(--carousel-radius, 25px);
 
   background-repeat: no-repeat;

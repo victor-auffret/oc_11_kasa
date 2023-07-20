@@ -1,16 +1,18 @@
 .card-location {
-  height: 345px;
+  width: 340px;
 
+  /*
   margin-bottom: 15px;
   margin-left: 15px;
-  margin-right: 15px;
+  margin-right: 15px;*/
+  margin-bottom: 50px;
 
   border-radius: 10px;
 
   background-color: var(--orange);
   color: #fff;
 
-  aspect-ratio: 340 / 345;
+  aspect-ratio: 1 / 1;
 }
 
 .card-location:hover {

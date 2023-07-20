@@ -1,4 +1,4 @@
-import { Children, FunctionComponent, useCallback, useMemo, useState } from 'react';
+import { FunctionComponent, useMemo } from 'react';
 import "./index.css"
 import { useAccordeon } from '../../hooks/useAccordeon';
 import type { Child } from '../../hooks/useAccordeon';
